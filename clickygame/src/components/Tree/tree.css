@@ -22,7 +22,8 @@ img:hover {
     float: none;
     text-align: center;
     margin: auto;
-    background-color: black;
+    /* background-color: black; */
+    background-color: transparent;
     color: white;
     /* text-align: center; */
 }

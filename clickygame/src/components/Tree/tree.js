@@ -9,6 +9,7 @@ const Tree = props => (
             <img alt={props.name} src={props.image} />
         </div>
     </div>
+    
 );
 
 export default Tree;
