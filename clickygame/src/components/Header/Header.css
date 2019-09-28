@@ -9,6 +9,12 @@
     float: left;
   }
   
-  .scores {
+  /* .scores {
     float: right;
+  } */
+  .title-main {
+    text-align: center;
+    color: white;
+    font-family: 'Notable', sans-serif;
+    font-size: 45px;
   }
