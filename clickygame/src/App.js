@@ -18,17 +18,17 @@ class App extends Component {
         console.log(this.state.highscore);
       });
     }
-    this.state.trees.forEach(card => {
-      card.count = 0;
+    this.state.trees.forEach(tree => {
+      tree.count = 0;
     });
-    alert(`Game Over. Try Again to Beat your HighScore :( \nscore: ${this.state.score}`);
+    alert(`Game Over. Try Again to Beat your HighScore! \nscore: ${this.state.score}`);
     this.setState({score: 0});
     return true;
   }
 
   clickCount = id => {
-    this.state.trees.find((o, i) => {
-      if (o.id === id) {
+    this.state.trees.find((Param, i) => {
+      if (Param.id === id) {
         if(trees[i].count === 0){
           trees[i].count = trees[i].count + 1;
           this.setState({score : this.state.score + 1}, function(){
@@ -40,7 +40,7 @@ class App extends Component {
           this.gameOver();
         }
       }
-      return false
+      return false;
     });
   }
 
@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-     <Header score={this.state.score} highscore={this.state.highscore} title={"Trees Memory Game"} message={this.state.message} />
+     <Header score={this.state.score} highscore={this.state.highscore} title={"Trees Memory Game"} />
         <div className="container">
           {this.state.trees.map((tree) => (
             <Tree

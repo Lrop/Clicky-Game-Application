@@ -11,11 +11,14 @@ img {
 
 img:hover {
     /* border-radius: 30px; */
+    padding: 5px;
     width: 200px;
     height: 200px;
     box-shadow: 2px 2px 40px white;
     /* cursor: grabbing; */
-    border-style: double white;
+    /* border-style: double white; */
+    border: solid 6px black;
+  /* margin: -2px; */
 }
 
 .scores {

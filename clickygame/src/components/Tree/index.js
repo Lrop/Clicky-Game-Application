@@ -3,12 +3,6 @@ import "./tree.css";
 
 
 
-
-
-
-
-
-
 const Tree = props => (
 
     <div className="tree" onClick={() => props.clickCount(props.id)}>

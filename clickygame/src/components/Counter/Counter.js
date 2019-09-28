@@ -23,11 +23,11 @@ class Counter extends React.Component {
   // The render method returns the JSX that should be rendered
   render() {
     return (
-      <div className="card text-center">
-        <div className="card-header bg-primary text-white">
+      <div className="tree text-center">
+        <div className="tree-header bg-primary text-white">
           Click Counter!
         </div>
-        <CardBody
+        <treeBody
           count={this.state.count}
           handleIncrement={this.handleIncrement}
           handleDecrement={this.handleDecrement}
