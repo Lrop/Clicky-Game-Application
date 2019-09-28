@@ -18,28 +18,29 @@ class App extends Component {
         console.log(this.state.highscore);
       });
     }
-    this.state.cards.forEach(card => {
+    this.state.trees.forEach(card => {
       card.count = 0;
     });
-    alert(`Game Over :( \nscore: ${this.state.score}`);
+    alert(`Game Over. Try Again to Beat your HighScore :( \nscore: ${this.state.score}`);
     this.setState({score: 0});
     return true;
   }
 
   clickCount = id => {
-    this.state.cards.find((o, i) => {
+    this.state.trees.find((o, i) => {
       if (o.id === id) {
         if(trees[i].count === 0){
           trees[i].count = trees[i].count + 1;
           this.setState({score : this.state.score + 1}, function(){
             console.log(this.state.score);
           });
-          this.state.cards.sort(() => Math.random() - 0.5)
+          this.state.trees.sort(() => Math.random() - 0.5)
           return true; 
         } else {
           this.gameOver();
         }
       }
+      return false
     });
   }
 
@@ -51,7 +52,7 @@ class App extends Component {
         <div className="container">
           {this.state.trees.map((tree) => (
             <Tree
-              clickcount={this.clickCount}
+              clickCount={this.clickCount}
               id={tree.id}
               key={tree.id}
               image={tree.image}
